@@ -1,0 +1,15 @@
+clear all;
+t=-5:0.001:5;
+T=2;
+y1=sinc(t);
+plot(t,y1);
+hold on;
+ylim([-3,3]);
+xlabel('Time');
+grid on;
+% y2=imag(hilbert(y1));
+% plot(t,y2,'r');
+% hold on;
+y3=((1/pi.*t).*(1-(cos(pi.*t))));
+plot(t,y3,'r');
+legend('Sinc Wave','Hilbert Transform');

@@ -1,0 +1,11 @@
+clear all;
+t=-2:0.001:2;
+T=1;
+y1=rectpuls(t,T);
+plot(t,y1);
+xlabel('Time');
+hold on;
+grid on;
+y2=(1/pi)*(log((t+0.5)./(t-0.5)));
+plot(t,y2,'r');
+legend('Rectangular Pulse','Hilbert Transform');
